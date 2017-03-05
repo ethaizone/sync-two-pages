@@ -1,0 +1,14 @@
+<input type="text" id="receiver">
+
+<script type="text/javascript">
+document.getElementById('receiver').value = localStorage.getItem('lastMsg')
+handle_storage = function(e) {
+    if (!e) { e = window.event; }
+    document.getElementById('receiver').value = e.newValue;
+}
+if (window.addEventListener) {
+    window.addEventListener("storage", handle_storage, false);
+} else {
+    window.attachEvent("onstorage", handle_storage);
+};
+</script>

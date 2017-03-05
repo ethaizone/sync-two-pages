@@ -1,0 +1,8 @@
+<input type="text" id="msg">
+<input type="submit" id="send" value="Send">
+
+<script>
+document.getElementById('send').addEventListener('click', function(e){    
+    localStorage.setItem('lastMsg', document.getElementById('msg').value)
+})
+</script>
